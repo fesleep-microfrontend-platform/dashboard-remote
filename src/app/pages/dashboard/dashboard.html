@@ -1,39 +1,34 @@
 <section class="dashboard">
-  <header class="dashboard__header">
+  <ui-stack class="dashboard__header" direction="row" justify="between" align="center" gap="md">
     <div>
-      <h1>Dashboard</h1>
-      <p>A quick overview of your app’s key metrics.</p>
+      <h1>{{ 'dashboard.title' | translate }}</h1>
+      <p>{{ 'dashboard.subtitle' | translate }}</p>
     </div>
-    <button class="dashboard__refresh" type="button">
-      Refresh data
-    </button>
-  </header>
+    <ui-button variant="secondary" (pressed)="onRefresh()">{{ 'dashboard.refresh' | translate }}</ui-button>
+  </ui-stack>
 
   <section class="dashboard__grid">
-    <article class="dashboard__card">
-      <h2>Active users</h2>
-      <p class="dashboard__value">1,234</p>
-      <p class="dashboard__hint">Last 24 hours (placeholder).</p>
-    </article>
+    <ui-card>
+      <h2>{{ 'dashboard.activeUsers' | translate }}</h2>
+      <p class="dashboard__value">{{ activeUsers }}</p>
+      <p class="dashboard__hint">{{ 'dashboard.hint24h' | translate }}</p>
+    </ui-card>
 
-    <article class="dashboard__card">
-      <h2>New signups</h2>
-      <p class="dashboard__value">87</p>
-      <p class="dashboard__hint">Today (placeholder).</p>
-    </article>
+    <ui-card>
+      <h2>{{ 'dashboard.newSignups' | translate }}</h2>
+      <p class="dashboard__value">{{ newSignups }}</p>
+      <p class="dashboard__hint">{{ 'dashboard.hintToday' | translate }}</p>
+    </ui-card>
 
-    <article class="dashboard__card">
-      <h2>Conversion rate</h2>
-      <p class="dashboard__value">3.4%</p>
-      <p class="dashboard__hint">Sample metric for layout only.</p>
-    </article>
+    <ui-card>
+      <h2>{{ 'dashboard.conversionRate' | translate }}</h2>
+      <p class="dashboard__value">{{ conversionRate }}</p>
+      <p class="dashboard__hint">{{ 'dashboard.hintSample' | translate }}</p>
+    </ui-card>
 
-    <article class="dashboard__card dashboard__card--wide">
-      <h2>Recent activity</h2>
-      <p class="dashboard__hint">
-        This area can show charts, tables, or logs. For now, it’s just a
-        placeholder to help you design the layout.
-      </p>
-    </article>
+    <ui-card class="dashboard__card--wide">
+      <h2>{{ 'dashboard.recentActivity' | translate }}</h2>
+      <p class="dashboard__hint">{{ 'dashboard.hintCharts' | translate }}</p>
+    </ui-card>
   </section>
 </section>
