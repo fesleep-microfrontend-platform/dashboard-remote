@@ -4,7 +4,7 @@ import {
   UiButtonComponent,
   UiCardComponent,
   UiStackComponent,
-} from '@farm/ui-design-system';
+} from '@fesleep-microfrontend-platform/ui-design-system';
 
 @Component({
   selector: 'app-dashboard',
