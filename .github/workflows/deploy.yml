@@ -19,5 +19,4 @@ jobs:
       aws_region: ${{ vars.AWS_REGION }}
       app_name: ${{ vars.APP_NAME }}
       role_arn: ${{ vars.ROLE_ARN }}
-    secrets:
-      NPM_GITHUB_TOKEN: NPM_GITHUB_TOKEN
+    secrets: inherit
